@@ -73,7 +73,7 @@ router.get(
   passport.authenticate("google", { failureRedirect: "/login" }),
   (req, res) => {
     if (!req.user) {
-      return res.redirect("http://localhost:3000/login");
+      return res.redirect("https://smart-saver-frontend.vercel.app/login");
     }
 
     // Generate JWT Token
@@ -85,7 +85,7 @@ router.get(
 
     // Redirect to frontend with token
     res.redirect(
-      `http://localhost:3000/google-auth-success?token=${token}&name=${req.user.name}`
+      `https://smart-saver-frontend.vercel.app/google-auth-success?token=${token}&name=${req.user.name}`
     );
   }
 );

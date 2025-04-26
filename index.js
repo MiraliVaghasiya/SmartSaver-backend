@@ -17,7 +17,7 @@ const datasetRouter = require("./routes/datasetRouter");
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://smart-saver-frontend.vercel.app/",
     credentials: true,
   })
 );
